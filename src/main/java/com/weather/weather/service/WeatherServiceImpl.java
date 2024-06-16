@@ -18,6 +18,6 @@ public class WeatherServiceImpl implements WeatherService {
      }
 
      public WeatherInfo someRestCall(@PathVariable String city) {
-      return this.restClient.get().uri("/VisualCrossingWebServices/rest/services/timeline/{city}/2020-10-19?key={API_KEY}", city, API_KEY).retrieve().body(WeatherInfo.class);
+      return this.restClient.get().uri("/VisualCrossingWebServices/rest/services/timeline/{city}/2020-10-19?key={API_KEY}&unitGroup=metric", city, API_KEY).retrieve().body(WeatherInfo.class);
     }
 } 
